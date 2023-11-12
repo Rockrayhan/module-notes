@@ -53,6 +53,14 @@ const newQuantity = localStorage.getItem(id,newQuantity ); 				= id = key, newQu
 
 
 
+8.JSON.stringify() 
+Convert a JavaScript object into a string with JSON.stringify(). When sending data to a web server, the data has to be a string.
+
+
+9. JSON.parse()
+When receiving data from a web server, the data is always a string. Parse the data with JSON.parse(), and the data becomes a JavaScript object.
+
+
   
 
 
