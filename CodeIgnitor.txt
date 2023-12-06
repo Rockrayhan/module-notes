@@ -1,0 +1,3 @@
+==================== CodeIgnitor ====================
+
+Make Controller: php spark make:controller controlellerName

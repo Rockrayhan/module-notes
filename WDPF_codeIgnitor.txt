@@ -1,4 +1,5 @@
-============ CodeIgnitor ===========
+==================== CodeIgnitor ====================
+
 
 1. install composer, run composer in cmd to check
 
@@ -7,6 +8,16 @@
 
 * run angular		=  php spark serve
 * make controller	= php spark make:controller AboutContoler 
+* migration		= php spark make:migration products1_migration;
+
+
+
+
+##. Show error  = make env to .env, make  CI_ENVIRONMENT = production  to CI_ENVIRONMENT = development ;
+
+##. public string $indexPage = 'index.php';		= remove the index.php for path problem/css,js problem ;
+
+
 
 
 ============ for crud ===============
@@ -19,4 +30,22 @@ config the controler file in which you want to show data
 
 3.
 
- 
+
+
+
+========================== Authentication ======================
+
+https://www.positronx.io/codeigniter-authentication-login-and-registration-tutorial/
+
+
+
+
+
+
+
+
+
+
+
+
+
