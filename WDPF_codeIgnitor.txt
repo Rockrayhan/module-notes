@@ -1,0 +1,22 @@
+============ CodeIgnitor ===========
+
+1. install composer, run composer in cmd to check
+
+2. uncomment intl in php.ini, run , check routing
+
+
+* run angular		=  php spark serve
+* make controller	= php spark make:controller AboutContoler 
+
+
+============ for crud ===============
+* https://phpforever.com/codeigniterexample/codeigniter-4-crud-example/ 
+
+1. connect db in database.php and env(optional) file.
+
+2. create model file , config the file, 
+config the controler file in which you want to show data 
+
+3.
+
+ 
