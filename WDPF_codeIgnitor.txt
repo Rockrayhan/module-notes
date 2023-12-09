@@ -9,6 +9,7 @@
 * run angular		=  php spark serve
 * make controller	= php spark make:controller AboutContoler 
 * migration		= php spark make:migration products1_migration;
+* run migration		= php spark migrate
 
 
 
@@ -48,6 +49,21 @@ https://www.positronx.io/codeigniter-authentication-login-and-registration-tutor
 4. make ['filter' => 'authGuard'] in router for your routes.
 
 
+
+
+
+
+
+===================== session ========================
+
+* <?php print_r($_SESSION) ?>		= check available sessions.
+* <?php echo session()->name ; ?>	= show name
+
+
+
+======================= multiple table connection ================
+
+https://makitweb.com/codeigniter-4-foreign-key-migration-guide/
 
 
 
