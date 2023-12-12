@@ -10,6 +10,8 @@
 * make controller	= php spark make:controller AboutContoler 
 * migration		= php spark make:migration products1_migration;
 * run migration		= php spark migrate
+* migration refresh	= php spark migrate:refresh
+* make cors		= php spark make:filter Cors
 
 
 
@@ -65,6 +67,40 @@ https://www.positronx.io/codeigniter-authentication-login-and-registration-tutor
 
 https://makitweb.com/codeigniter-4-foreign-key-migration-guide/
 
+*  $this->products->join('category', 'category.id = products.category_id'); 	= products table er sathe category table er join.
+
+
+
+===================== Connect With Rest API ===================
+
+https://www.tutsmake.com/codeigniter-4-rest-api-example-tutorial/
+
+https://onlinewebtutorblog.com/codeigniter-4-enable-cors-for-restful-apis/	= install cors in codeignitor
+
+1. make cors, use http in befor method in cors.php
+2. import these in filter.php
+use App\Filters\Cors;
+'cors'          => Cors::class
+'cors'
+
+
+
+===================== Deploy to Production ====================
+1. production mdoe in .env file
+
+2. move all files from public directory to root
+
+3. inside root directory in index.php  file change path
+require FCPATH . '../app/Config/Paths.php';
+to 
+require FCPATH . 'app/Config/Paths.php';
+
+4. change base_url in app/config/App.php as your path
+$baseURL = 'http://localhost:8080'
+to
+$baseURL = 'http://localhost/wdpf55_codignator/deploy/products'
+
+5. Give base_url('') in your routes path.
 
 
 
