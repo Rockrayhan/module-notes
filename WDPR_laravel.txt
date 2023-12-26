@@ -1,0 +1,12 @@
+========================= Laravel ==============================
+
+1. composer create-project laravel/laravel:^8 project1 		=	install laravel project				
+2. php artisan serve						= 	run project
+3. composer install						= 	get your packages ( like node modules )
+4.
+
+
+
+1.     public function store( Request $req ){			= Request is a object which passes its data to a parameter $req.
+        echo $req->email ;
+    }
