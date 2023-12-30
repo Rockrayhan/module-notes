@@ -1,12 +1,39 @@
-========================= Laravel ==============================
-
-1. composer create-project laravel/laravel:^8 project1 		=	install laravel project				
-2. php artisan serve						= 	run project
-3. composer install						= 	get your packages ( like node modules )
-4.
+				========================= Laravel ==============================
 
 
+===================== install process =======================
 
-1.     public function store( Request $req ){			= Request is a object which passes its data to a parameter $req.
+1. composer create-project laravel/laravel:^8 project1 		= install laravel project				
+2. php artisan serve						= run project
+3. composer install						= get your packages ( like node modules )
+4. composer require 
+
+
+=================== seed =======================
+**. enable the model  User::factory(10)->create() in DatbaseSeeder.php .
+ then run cmd  = php artisan db:seed 
+
+================= Enable Debugger ===================
+		
+**. composer require barryvdh/laravel-debugbar --dev		= enable debugger
+
+
+
+===================================
+
+
+***     public function store( Request $req ){			= Request is a object which passes its data to a parameter $req.
         echo $req->email ;
     }
+
+
+*** value="{{ old('subject') }}"				= get the written value  in your input field
+
+
+***        $messages = [
+            'name.required' => 'Naam koi ??',
+            'subject.required' => 'Subject den vai please',	= field required na thakle ai msg
+            'subject.min' => 'Subject er length barao',		= field er minimum value na dile ai msg.
+        ] ;
+
+
