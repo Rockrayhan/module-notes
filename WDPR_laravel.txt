@@ -9,6 +9,21 @@
 4. composer require 
 
 
+
+
+* run angular		= php artisan serve
+* make controller	= php artisan make:controller AboutContoler 
+* migration		= php artisan make:migration products1_migration;
+* run migration		= php artisan migrate
+* migration refresh	= php artisan migrate:refresh
+* make cors		= php artisan make:filter Cors
+* role back and make table. 	= php artisan migrate:refresh
+* run seed			= php artisan db:seed
+* see route lists		= php artisan route:list
+
+
+
+
 =================== seed =======================
 **. enable the model  User::factory(10)->create() in DatbaseSeeder.php .
  then run cmd  = php artisan db:seed 
@@ -35,5 +50,31 @@
             'subject.required' => 'Subject den vai please',	= field required na thakle ai msg
             'subject.min' => 'Subject er length barao',		= field er minimum value na dile ai msg.
         ] ;
+
+
+
+================================== Authentication ================================
+
+1. make middlewire = ** php artisan make:middleware userAuthentication
+2. use middlewire class ( userAuthentication ) in kernel.php, use userAuth middlewire in desired route
+3.
+
+
+
+============================ Auto Authentication ========================
+https://www.itsolutionstuff.com/post/laravel-8-multi-auth-authentication-tutorialexample.html
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
