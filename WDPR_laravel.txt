@@ -2,11 +2,16 @@
 
 
 ===================== install process =======================
+** enable intl, zip , curl extentions in php.ini
 
-1. composer create-project laravel/laravel:^8 project1 		= install laravel project				
+
+1. composer create-project laravel/laravel:^8 project1 		= install laravel project v8
+   composer create-project laravel/laravel example-app 		= v10
 2. php artisan serve						= run project
 3. composer install						= get your packages ( like node modules )
 4. composer require 
+
+
 
 
 
@@ -20,7 +25,7 @@
 * role back and make table. 	= php artisan migrate:refresh
 * run seed			= php artisan db:seed
 * see route lists		= php artisan route:list
-
+* make auto methods for controller and models	 = php artisan make:model Category -mcr
 
 
 
@@ -53,6 +58,13 @@
 
 
 
+***  DB::table('categories')->insert($data); 			= connect with db directly without model
+
+
+
+
+			   
+
 ================================== Authentication ================================
 
 1. make middlewire = ** php artisan make:middleware userAuthentication
@@ -61,8 +73,8 @@
 
 
 
-============================ Auto Authentication ========================
-https://www.itsolutionstuff.com/post/laravel-8-multi-auth-authentication-tutorialexample.html
+
+
 
 
 
