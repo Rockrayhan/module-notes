@@ -17,12 +17,17 @@
 
 
 * run angular		= php artisan serve
+
 * make controller	= php artisan make:controller AboutContoler 
+
 * migration		= php artisan make:migration products1_migration;
+* make migration table	= php artisan make:migration create_admins_table
 * run migration		= php artisan migrate
 * migration refresh	= php artisan migrate:refresh
-* make cors		= php artisan make:filter Cors
 * role back and make table. 	= php artisan migrate:refresh
+
+* make cors		= php artisan make:filter Cors
+
 * run seed			= php artisan db:seed
 * see route lists		= php artisan route:list
 * make auto methods for controller and models	 = php artisan make:model Category -mcr
@@ -72,7 +77,44 @@
 3.
 
 
+================================ multiple auth =============================
 
+
+
+1. Migration for Admin		= php artisan make:migration create_admins_table
+				= php artisan migrate
+				
+
+2. Make Model for Admin		php artisan make:model Admin
+				= create Admin model as like User model.
+	
+3. create a admin guard & admin provider in auth.php/config
+
+4. create middleware				= php artisan make:middleware admin
+make adminAuth middleware in kernel.php		= 'AdminAuth' => \App\Http\Middleware\Admin::class,
+
+5. make controller				= php artisan make:controller AdminController
+   make routes for the contorller		
+   make view file for the routes
+   make store method from auth.php/route -> AuthenticatedSessionController in your AdminController
+
+
+6. ( optional ) make seeder.			= php artisan make:seeder AdminSeeder
+
+seeder/AdminSeeder.php =>
+	 DB::table('admins')->insert([
+            'name' => 'admin',
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('password'),
+            'status' => '1',
+        ]);
+
+						= php artisan db:seed AdminSeeder
+
+
+
+=============== queries ==========
+1. what is middleware , why ? 
 
 
 
