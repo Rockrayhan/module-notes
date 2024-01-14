@@ -113,6 +113,27 @@ seeder/AdminSeeder.php =>
 
 
 
+
+=============================== Relational database Tables ===================================
+
+https://laravel.com/docs/10.x/eloquent-relationships
+
+
+
+
+***    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class, 'foriegnKey_id');		= give your forign key id table field name.
+    }
+
+
+*** categories , id = category_id 	 ( left side is primary key, right side is foreign key ) { if you want to connect automatically relationship }.
+
+
+
+
+
+
 =============== queries ==========
 1. what is middleware , why ? 
 
