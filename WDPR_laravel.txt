@@ -16,7 +16,7 @@
 
 
 
-* run angular		= php artisan serve
+* run Laravel		= php artisan serve
 
 * make controller	= php artisan make:controller AboutContoler 
 
@@ -28,15 +28,26 @@
 
 * make cors		= php artisan make:filter Cors
 
+* make seeder			= php artisan make:seeder UserSeeder
 * run seed			= php artisan db:seed
+* run exact seeder		= php artisan db:seed CategorySeeder
 * see route lists		= php artisan route:list
 * make auto methods for controller and models	 = php artisan make:model Category -mcr
 
 
 
 =================== seed =======================
+** call the seeders in DatabaseSeeder.php
+        $this->call(UserSeeder::class);
+        $this->call(AdminSeeder::class);
+        $this->call(CategorySeeder::class);
+        $this->call(ProductSeeder::class);
+
+
 **. enable the model  User::factory(10)->create() in DatbaseSeeder.php .
  then run cmd  = php artisan db:seed 
+
+
 
 ================= Enable Debugger ===================
 		
@@ -136,6 +147,7 @@ https://laravel.com/docs/10.x/eloquent-relationships
 
 =============== queries ==========
 1. what is middleware , why ? 
+2. scope resulation ::  , $this , 
 
 
 
