@@ -78,7 +78,7 @@
 
 
 
-
+*** old()	= value="{{ old('name', $product['name']) }}"	= $product['name']( comes from database ) jodi na thake then old('name') (summitted data)
 			   
 
 ================================== Authentication ================================
