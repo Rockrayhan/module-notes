@@ -20,17 +20,21 @@
 
 * make controller	= php artisan make:controller AboutContoler 
 
-* migration		= php artisan make:migration products1_migration;
-* make migration table	= php artisan make:migration create_admins_table
-* run migration		= php artisan migrate
-* migration refresh	= php artisan migrate:refresh
-* role back and make table. 	= php artisan migrate:refresh
+* migration				= php artisan make:migration products1_migration;
+* make migration table			= php artisan make:migration create_admins_table
+* run migration (make the table in db)	= php artisan migrate
+* make migration table with model	= php artisan make model ModelName -mr
+* migration refresh			= php artisan migrate:refresh
+* role back and make table. 		= php artisan migrate:refresh
 
 * make cors		= php artisan make:filter Cors
 
 * make seeder			= php artisan make:seeder UserSeeder
 * run seed			= php artisan db:seed
 * run exact seeder		= php artisan db:seed CategorySeeder
+* make seed and migrate together	= php artisan migrate --seed
+
+
 * see route lists		= php artisan route:list
 * make auto methods for controller and models	 = php artisan make:model Category -mcr
 
@@ -51,7 +55,7 @@
 
 ================= Enable Debugger ===================
 		
-**. composer require barryvdh/laravel-debugbar --dev		= enable debugger
+*** composer require barryvdh/laravel-debugbar --dev		= enable debugger
 
 
 
@@ -144,6 +148,12 @@ https://laravel.com/docs/10.x/eloquent-relationships
 
 
 
+========================== Search =====================
+https://www.itsolutionstuff.com/post/laravel-10-scout-full-text-search-tutorialexample.html
+
+
+========================== add to cart ===================
+https://www.itsolutionstuff.com/post/laravel-shopping-add-to-cart-with-ajax-exampleexample.html
 
 =============== queries ==========
 1. what is middleware , why ? 
