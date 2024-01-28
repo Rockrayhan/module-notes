@@ -155,9 +155,21 @@ https://www.itsolutionstuff.com/post/laravel-10-scout-full-text-search-tutoriale
 ========================== add to cart ===================
 https://www.itsolutionstuff.com/post/laravel-shopping-add-to-cart-with-ajax-exampleexample.html
 
+
+
+============================ laravel traits ==================
+https://onlinewebtutorblog.com/how-to-use-trait-in-laravel-10-example-tutorial/
+
+
+============================ laravel spatie role and permission ===========
+https://www.allphptricks.com/simple-laravel-10-user-roles-and-permissions/
+
+
+
+
 =============== queries ==========
 1. what is middleware , why ? 
-2. scope resulation ::  , $this , 
+2. scope resulation ::  , $this , OOP
 
 
 
