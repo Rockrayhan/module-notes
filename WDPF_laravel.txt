@@ -24,8 +24,8 @@
 * make migration table			= php artisan make:migration create_admins_table
 * run migration (make the table in db)	= php artisan migrate
 * make migration table with model	= php artisan make model ModelName -mr
-* migration refresh			= php artisan migrate:refresh
-* role back and make table. 		= php artisan migrate:refresh
+* drop and fresh			= php artisan migrate:fresh
+* role back and refresh. 		= php artisan migrate:refresh
 
 * make cors		= php artisan make:filter Cors
 
@@ -38,7 +38,8 @@
 * see route lists		= php artisan route:list
 * make auto methods for controller and models	 = php artisan make:model Category -mcr
 
-
+* copy env file			= copy .env.example .env
+				= php artisan key:generate
 
 =================== seed =======================
 ** call the seeders in DatabaseSeeder.php
@@ -105,8 +106,8 @@
 	
 3. create a admin guard & admin provider in auth.php/config
 
-4. create middleware				= php artisan make:middleware admin
-make adminAuth middleware in kernel.php		= 'AdminAuth' => \App\Http\Middleware\Admin::class,
+4. create middleware				= php artisan make:middleware admin , make a condition
+make admin middleware in kernel.php		= 'admin' => \App\Http\Middleware\Admin::class,
 
 5. make controller				= php artisan make:controller AdminController
    make routes for the contorller		
