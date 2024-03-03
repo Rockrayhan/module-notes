@@ -10,7 +10,7 @@
 2. php artisan serve						= run project
 3. composer install						= get your packages ( like node modules )
 4. composer require 
-
+5. 
 
 
 
@@ -19,6 +19,9 @@
 * run Laravel		= php artisan serve
 
 * make controller	= php artisan make:controller AboutContoler 
+
+* make model with table	= php artisan make:model Product -m	
+
 
 * migration				= php artisan make:migration products1_migration;
 * make migration table			= php artisan make:migration create_admins_table
@@ -167,10 +170,37 @@ https://www.allphptricks.com/simple-laravel-10-user-roles-and-permissions/
 
 
 
+=============================== laravel react crud =========================
+https://www.nicesnippets.com/blog/laravel-10-react-crud-example-tutorial
+
+
+
+=============================== laravel add to cart ========================
+https://github.com/abdulaziz-m5u/ecommerce-youtube
+
+
+**** for frontend ****
+
+0. php artisan breeze:install react
+1. inertia install for client side 		= npm install @inertiajs/react
+2. 
+
+
+
+
+
+
+
+
+
 
 =============== queries ==========
 1. what is middleware , why ? 
-2. scope resulation ::  , $this , OOP
+2. scope resulation ::  , $this , OOP, public, private, protected
+3. Collect inteview questions and study them
+
+public 	= can be accessed by all
+private = 
 
 
 
@@ -178,12 +208,29 @@ https://www.allphptricks.com/simple-laravel-10-user-roles-and-permissions/
 
 
 
+/* styles.css */
+.container {
+    @apply mx-auto max-w-screen-xl;
+  }
+
+
+.center {
+    @apply flex justify-center items-center;
+  }
+
+
+<div class="grid grid-cols-1  lg:grid-cols-4">
+<div class="col-span-1 lg:col-span-1">
+
+
+** To do  for project**
+1. make trigger for category X product
+2. delete , edit for item 
 
 
 
 
-
-
+APP_URL=http://localhost
 
 
 
