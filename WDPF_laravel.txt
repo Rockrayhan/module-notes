@@ -230,7 +230,8 @@ private =
 
 
 
-APP_URL=http://localhost
+* API = nijer software/data system er jonno onno kono existing software/ datasystem bebohar korake API (Application Programming Interface) bole.
+* API is like a connector that connects User with Owner ( pathao - Google Map ). It takes the request from user, make the request to the owner and gives only the data that the user needs. ( like->  Customer -- waiter with food -- kitchen )
 
 
 

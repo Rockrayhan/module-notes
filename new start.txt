@@ -63,5 +63,42 @@ When receiving data from a web server, the data is always a string. Parse the da
 
   
 
+=============== use Context =====================
+
+1. create Context & AuthProvider
+
+import { createContext } from "react";
+
+export const AuthContext =  createContext(null);
+
+const AuthProvider = ({children}) => {
+    return (
+        <AuthContext.Provider>
+            {children}
+        </AuthContext.Provider>
+    )
+}
+
+export default AuthProvider ;
+
+
+2. wrap the Authprovider in main.js
+
+  <React.StrictMode>
+    <AuthProvider>
+    <RouterProvider router={router}></RouterProvider>
+    </AuthProvider>
+  </React.StrictMode>,
+
+
+3. get the data in your component 
+
+const Register = () => {
+
+  const sampleData = useContext(AuthContext)
+  console.log(sampleData);
+
+
+
 
 
