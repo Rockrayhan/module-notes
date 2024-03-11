@@ -179,6 +179,15 @@ https://www.nicesnippets.com/blog/laravel-10-react-crud-example-tutorial
 https://github.com/abdulaziz-m5u/ecommerce-youtube
 
 
+
+
+
+=============================== laravel Vue inertia ===========================
+https://larainfo.com/blogs/laravel-10-inertia-vue-3-crud-operation-example
+
+
+
+
 **** for frontend ****
 
 0. php artisan breeze:install react
@@ -233,6 +242,63 @@ private =
 * API = nijer software/data system er jonno onno kono existing software/ datasystem bebohar korake API (Application Programming Interface) bole.
 * API is like a connector that connects User with Owner ( pathao - Google Map ). It takes the request from user, make the request to the owner and gives only the data that the user needs. ( like->  Customer -- waiter with food -- kitchen )
 
+
+
+
+
+
+**** for frontend ****
+
+0. php artisan breeze:install react
+1. inertia install for client side 		= npm install @inertiajs/react
+2. 
+
+
+
+
+
+
+
+
+
+
+=============== queries ==========
+1. what is middleware , why ? 
+2. scope resulation ::  , $this , OOP, public, private, protected
+3. Collect inteview questions and study them
+4. History() location in laravel
+
+
+https://medium.com/@khayrulalamdict
+
+
+public 	= can be accessed by all
+private = 
+
+
+
+
+
+
+
+/* styles.css */
+.container {
+    @apply mx-auto max-w-screen-xl;
+  }
+
+
+.center {
+    @apply flex justify-center items-center;
+  }
+
+
+<div class="grid grid-cols-1  lg:grid-cols-4">
+<div class="col-span-1 lg:col-span-1">
+
+
+===== todo (grooming) =====
+1. complete your cv at career hub
+2. 
 
 
 
