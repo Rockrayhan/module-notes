@@ -296,9 +296,31 @@ private =
 <div class="col-span-1 lg:col-span-1">
 
 
-===== todo (grooming) =====
-1. complete your cv at career hub
-2. 
+
+========= OOP Concept ==========
+class, object, method, ingheritance, polimorphism, overloading, method chainnig, constructor, destructor, cloaning, serializing, interface, abstract
+
+static method and  static property 
+
+
+
+Autoload: 
+jotogula class thakuk na keno ami jei class ke call korbo sei class call hoye jabe. Class name , file name same hoite hobe. ( shob unction ak sathe run hole site er load bere jay. jar karone autoload use kora hoy, jei method er kaj taake call korle sei method run hoye jabe. )
+
+
+Final: Final keyword use korle kichu change kora jay na , inheritence kora jay na.
+
+
+
+0=S5V5=A@z
+
+u770151235_ems
+
+
+
+
+
+
 
 
 
