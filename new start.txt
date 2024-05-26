@@ -71,9 +71,11 @@ import { createContext } from "react";
 
 export const AuthContext =  createContext(null);
 
+const sampleData = 'kiremama' ;
+
 const AuthProvider = ({children}) => {
     return (
-        <AuthContext.Provider>
+        <AuthContext.Provider value={sampleData}>
             {children}
         </AuthContext.Provider>
     )
@@ -99,6 +101,21 @@ const Register = () => {
   console.log(sampleData);
 
 
+===================================================
 
+
+
+================= Hooks ===============
+
+1.  UseEffect e [] dependency array use kora hoy karon er vitor jei value deya hoy oitar state jodi change hoy then useEffect abar run korbe.
+
+
+
+
+
+
+
+=========  EKT  ===============
+ Set domain in fb page		= https://www.facebook.com/settings/?tab=advanced_messaging
 
 

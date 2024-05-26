@@ -6,7 +6,7 @@
 
 
 1. composer create-project laravel/laravel:^8 project1 		= install laravel project v8
-   composer create-project laravel/laravel example-app 		= v10
+   composer create-project laravel/laravel:^10.0 example-app 	= v10
 2. php artisan serve						= run project
 3. composer install						= get your packages ( like node modules )
 4. composer require 
@@ -312,10 +312,17 @@ Final: Final keyword use korle kichu change kora jay na , inheritence kora jay n
 
 
 
-0=S5V5=A@z
+# __Construct()
+The constructor is a special method in PHP classes that is automatically called when an object of the class is created using the new keyword.
 
-u770151235_ems
 
+# __desctruct()
+When the object goes out of scope or is manually destroyed ( unset the object ) then the destruct function will be automatically called. But in php it has an automatic guarbage system so we don't need to use destruct often.
+
+
+# inheritence
+
+it means uttorshori(successor).
 
 
 
