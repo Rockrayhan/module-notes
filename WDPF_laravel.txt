@@ -38,6 +38,9 @@
 * make seed and migrate together	= php artisan migrate --seed
 
 
+* make request			= php artisan make:request RegisterRequest
+
+
 * see route lists		= php artisan route:list
 * make auto methods for controller and models	 = php artisan make:model Category -mcr
 
@@ -109,7 +112,7 @@
 	
 3. create a admin guard & admin provider in auth.php/config
 
-4. create middleware				= php artisan make:middleware admin , make a condition
+4. create middleware				= php artisan make:middleware Admin , make a condition
 make admin middleware in kernel.php		= 'admin' => \App\Http\Middleware\Admin::class,
 
 5. make controller				= php artisan make:controller AdminController
@@ -184,6 +187,30 @@ https://github.com/abdulaziz-m5u/ecommerce-youtube
 
 =============================== laravel Vue inertia ===========================
 https://larainfo.com/blogs/laravel-10-inertia-vue-3-crud-operation-example
+
+
+
+
+======================== showing alerts ===============
+
+         @if (session('msg'))
+          <div class="alert alert-success">
+              {{ session('msg') }}
+          </div>
+      @endif
+
+ ===========================
+	
+	 @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
 
 
 
@@ -267,9 +294,9 @@ private =
 2. scope resulation ::  , $this , OOP, public, private, protected
 3. Collect inteview questions and study them
 4. History() location in laravel
+5. laravel query builder vs eloquent ORM ?
 
 
-https://medium.com/@khayrulalamdict
 
 
 public 	= can be accessed by all
@@ -323,6 +350,38 @@ When the object goes out of scope or is manually destroyed ( unset the object ) 
 # inheritence
 
 it means uttorshori(successor).
+
+
+
+========================================== quick notes ==========================================
+
+* MiddleWire		= middlewire is used for user based route authorization.
+
+* HTTP Request 		= a request that send by client to server
+
+* insert() vs create() 	= create automatic fillup timestamp, more secure, used in mass assingment
+		          insert needs to fill up manually, less secure, less used.
+			  
+
+
+
+
+=====================================================================================
+		Mysql unexpected shutdown error solving
+=====================================================================================
+
+1. copy data to data_old
+2. into data folder, delete > mysql , performance_schema, phpmyadmin, test
+3. delete all other files except > ibdata1
+4. copy and paste every thing from backup folder except ibdata1 
+
+
+
+
+
+
+
+
 
 
 
