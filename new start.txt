@@ -115,6 +115,44 @@ const Register = () => {
 
 
 
+
+
+
+
+
+
+================================================= NEXT JS ======================================================
+
+1. const pathName = usePathname();	= check the path
+
+2. "use client" ;			= when u need to make a page client side rendering, import it at the top of the page.
+
+3. const router = useRouter();		= use navigate ( the page must be client side. )
+	router.push('/about')
+
+	redirect()			= use this if the page is server side.
+
+4. folder name = (dashboard)		= it will not create any path/route only folder.
+
+5. folder name = [id]			= it is the dynamic route/ details page. 
+
+6. folder name = [...features]		= it is nested dynamic routes ( blogs/something/smtg/smtg )
+
+7. file name = route.js			= used for api routes. 
+
+
+
+
+* catching and revalidating		= it used to update data in realtime in Production Build.
+
+* for .env in next js			= use (NEXT_PUBLIC) before env variable like :  NEXT_PUBLIC_API_URL
+
+
+
+
+===================================================================================================================
+
+
 =========  EKT  ===============
  Set domain in fb page		= https://www.facebook.com/settings/?tab=advanced_messaging
 

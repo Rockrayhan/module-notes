@@ -355,15 +355,17 @@ it means uttorshori(successor).
 
 ========================================== quick notes ==========================================
 
-* MiddleWire		= middlewire is used for user based route authorization.
+* MiddleWire		= middlewire is used for user based route authorization and can filter HTTP requests entering your application.
 
-* HTTP Request 		= a request that send by client to server
+* HTTP Request 		= a request that send by client to server to retrieving data or submitting form data.
+
 
 * insert() vs create() 	= create automatic fillup timestamp, more secure, used in mass assingment
 		          insert needs to fill up manually, less secure, less used.
 			  
 
-
+* find($id) vs findOrFail($id) 	= findOrFail() automatic returns not found error. used for automatic simple error handeling.
+				= find() returns null for not found error, u have to use manually error	handeling.	
 
 
 =====================================================================================
