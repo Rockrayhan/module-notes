@@ -1,3 +1,11 @@
+
+* <div class="row align-items-stretch">		= make the columns same height
+
+* This ensures smaller images are loaded on mobile devices, improving load times and performance. =>
+ <img src="image.jpg" srcset="image-400w.jpg 400w, image-800w.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Responsive image">
+
+
+
 1.  Double(==) vs Thriple(===) 
 =>	Double equal cheak kore duita maan shoman kina, se data type cheack kore na.
 	Thriple equal cheak kore duita maan shoman kina, but se strickly data type cheack kore.
@@ -113,7 +121,17 @@ const Register = () => {
 
 
 
+=============================================== clsx =====================================
 
+        	<div>
+                    <span className={cn('h-[50px] w-[50px] rounded-full p-1', {
+                        'bg-green-500' : task.priority == "Low",
+                        'bg-yellow-500' : task.priority == "Medium",
+                        'bg-red-500' : task.priority == "High",
+                    })}> {priority} </span>
+                    <h3> {title} </h3>
+                    <p> {description} </p>
+                </div>
 
 
 
@@ -127,7 +145,7 @@ const Register = () => {
 
 2. "use client" ;			= when u need to make a page client side rendering, import it at the top of the page.
 
-3. const router = useRouter();		= use navigate ( the page must be client side. )
+3. const router = useRouter();		= use navigate ( the page must be client side. ) import from "next/navigation"
 	router.push('/about')
 
 	redirect()			= use this if the page is server side.
@@ -149,6 +167,11 @@ const Register = () => {
 
 
 
+
+
+* services / [id] / page.jsx		= details page to get single data
+
+* services / api / [id] / route.js	= route page to get single data
 
 ===================================================================================================================
 

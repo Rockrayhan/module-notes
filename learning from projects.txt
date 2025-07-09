@@ -1,0 +1,72 @@
+Cloud panel Access
+========
+Ip address: https://45.90.220.26:8443/
+Username: admin
+Password: 7@iAA%VR572PhDwG0ak5
+
+
+
+
+=========pos_laravel=====
+
+academicjournalist
+2WgAvQVMszoonqwlkNXv
+
+
+============== AI ==================
+* Use AI with a learning mindset – Question its answers instead of blindly copying them.
+* Engage in discussions – Join communities where deeper technical debates happen.
+* Improve code reviews – Focus on why a solution was chosen, not just if it works.
+* Build things from scratch – Gain hands-on experience before letting AI automate everything.
+
+
+=============== Final Touch ==============
+1. google lighthouse for optimization
+ * optimize images -> compress , use webp 
+
+2. responsiveness for all devices, mobile based text alighnment, line height, p size, img size, footer reshape.
+
+
+
+============= GoClova  ===========
+
+# React Router does not automatically scroll to the top when navigating between pages. You need to manually handle scrolling using useEffect.
+=> so I created scrollToTop component
+
+
+# after hosting when go to a page and refresh it shows  
+404 Not Found
+nginx
+
+=>  I used this code in vhost in cloudpanel  
+
+location / {
+ try_files $uri /index.html;
+}
+
+
+
+
+===========insoils blog ==============
+
+# when using tynemce if u are using tailwind css , use your customized own css like this , as tailwind overrides the default css.
+
+ {!! str_replace(
+                    ['<h1', '<h2', '<h3', '<h4', '<h5', '<h6'],
+                    [
+                        '<h1 class="text-4xl font-bold mt-4 mb-2"',
+                        '<h2 class="text-3xl font-bold mt-4 mb-2"',
+                        '<h3 class="text-2xl font-semibold mt-3 mb-1"',
+                        '<h4 class="text-xl font-medium mt-3 mb-1"',
+                        '<h5 class="text-lg font-medium mt-2 mb-1"',
+                        '<h6 class="text-base font-medium mt-2 mb-1"'
+                    ],
+                    $blog->content
+                ) !!}
+
+
+
+
+# sqlstate[hy000] [1045] access denied for user 'root'@'localhost' (using password: no)
+ => if database is not connecting for any reason then delete => bootstrap/cache/config.php
+

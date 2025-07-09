@@ -1,0 +1,131 @@
+================= Typescript basic ============
+
+
+1. genrate ts init file		= tsc --init
+
+2. console.log ts file with package ( to install) 		= npm i -g ts-node-dev 
+			  		( to run )		= ts-node-dev --respawn --transpile-only ./src/test.ts
+
+3.
+
+
+
+
+================================
+
+1. Type Assertion 	= when you are pretty much sure about the type, you give the type by yourself over typescript.
+
+    let anything : any;
+
+    anything = "this is a string" ;
+
+    (anything as string)
+
+
+
+2.  map types
+
+ // simple map
+    const arrayOfNumbers = [10 , 20, 25] ;
+    const arrayOfString = arrayOfNumbers.map( item => ( item.toString() )) ;
+    // console.log(arrayOfString);
+    
+
+
+    // mapped types
+    type AreaNumber = {
+        height: number;
+        width: number;
+    }
+
+    type AreaString = {
+        [key in keyof AreaNumber] : string	= AreaString er value gula string a convert hoye jabe.
+    }
+
+
+
+
+// mapped types with generic 
+
+    type AreaStringWithGeneric<T>  = {
+        [key in keyof T ] : T[key];			= 
+    }
+
+
+    const area1: AreaStringWithGeneric<{ height: string; width: number }> = {
+        height: "100",
+        width: 50,
+      };
+
+
+
+3. union and intersection 
+
+ union  	=  "male" | "female" 			= or value
+
+intersection	= "batting" & "bowling"			= and value
+
+
+
+
+4. type of 
+
+ function processValue(value: string | number): number {
+
+     if ( typeof value === 'number' ) {			= typeof diye value / parameter er type ber kora jaay.
+        return value * 2 ;
+    }
+     else return value.length ;
+ }
+
+ console.log(processValue(10));
+
+
+
+
+
+
+5. flat()			= multiple arrays of the same type with/ without using rest parameters
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================ express with typescript setup =============
+
+npm init -y				= install packages.json (with all yes)
+
+npm i -D typescript			= install typescript with dev dependencies
+
+npm i express				= install express
+
+tsc --init				= create typescript config file
+
+tsconfig.json  	= rootDir -> ./src/
+		= outDir -> ./dist/
+
+npm i --save-dev @types/express		= typescript package for express
+
+
+
+
+
+=============================== PH Tour Management Project =============================
+
+
+
+1. npm i express mongoose zod jsonwebtoken cors dotenv		= install backend 
+
+2. npm i -D ts-node-dev @types/express @types/cors @types/dotenv @types/jsonwebtoken		= install types 
+
+
+
