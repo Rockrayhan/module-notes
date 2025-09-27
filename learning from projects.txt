@@ -50,6 +50,7 @@ location / {
 ===========insoils blog ==============
 
 # when using tynemce if u are using tailwind css , use your customized own css like this , as tailwind overrides the default css.
+	or use customized css pros style.
 
  {!! str_replace(
                     ['<h1', '<h2', '<h3', '<h4', '<h5', '<h6'],
@@ -69,4 +70,17 @@ location / {
 
 # sqlstate[hy000] [1045] access denied for user 'root'@'localhost' (using password: no)
  => if database is not connecting for any reason then delete => bootstrap/cache/config.php
+
+
+
+
+
+
+================ apex scrap ==================
+
+# after hosing make a optimize.php in your public folder to clear cahche , view , routes.
+
+
+
+
 

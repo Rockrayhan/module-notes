@@ -176,6 +176,15 @@ const Register = () => {
 ===================================================================================================================
 
 
+                <FormDescription className="sr-only">				= sr-only = screen reader only ( best practice. )
+                  This is your public display name.
+                </FormDescription>
+
+
+
+
+
+
 =========  EKT  ===============
  Set domain in fb page		= https://www.facebook.com/settings/?tab=advanced_messaging
 

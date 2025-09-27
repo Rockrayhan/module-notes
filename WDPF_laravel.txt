@@ -24,7 +24,7 @@ composer create-project --prefer-dist laravel/laravel:^11.0 example-app
 
 * make controller	= php artisan make:controller AboutController 
 
-* make model with table	= php artisan make:model Product -m	
+* make model with migration	= php artisan make:model Product -m	
 
 
 * migration				= php artisan make:migration products1_migration;
@@ -203,6 +203,48 @@ https://larainfo.com/blogs/laravel-10-inertia-vue-3-crud-operation-example
 
 ======================== showing alerts =====================
 
+
+            {{-- Show Messages --}}
+            <div>
+                @if (session('success'))
+                    <div class="alert alert-success alert-dismissible fade show mb-3" role="alert">
+                        {{ session('success') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+
+                @if (session('error'))
+                    <div class="alert alert-danger alert-dismissible fade show mb-3" role="alert">
+                        {{ session('error') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+
+                @if ($errors->any())
+                    <div class="alert alert-danger alert-dismissible fade show mb-3" role="alert">
+                        <ul class="mb-0">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @if (session('success'))
     <div class="alert alert-success">{{ session('success') }}</div>
 @endif
@@ -228,6 +270,10 @@ https://larainfo.com/blogs/laravel-10-inertia-vue-3-crud-operation-example
     @elseif (session('error'))
         <div class="alert alert-danger">{{ session('error') }}</div>
     @endif
+
+
+
+
 
 
 
@@ -274,6 +320,9 @@ https://larainfo.com/blogs/laravel-10-inertia-vue-3-crud-operation-example
 
 <!DOCTYPE html>
 <html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <head>
     <title>@yield('title', 'My Shop')</title>
     <link rel="stylesheet" href="{{ asset('css/mystyle.css') }}">
@@ -351,33 +400,9 @@ only raw html, no @extend, no @section
 
 
 <div class="grid grid-cols-1  lg:grid-cols-4">
-<div class="col-span-1 lg:col-span-1">
+<div class="col-span-1 lg:col-span-1
 
 
-
-
-
-
-
-
-=============== queries ==========
-1. what is middleware , why ? 
-2. scope resulation ::  , $this , OOP, public, private, protected
-3. Collect inteview questions and study them
-
-public 	= can be accessed by all
-private = 
-
-
-
-
-
-
-
-
-** To do  for project**
-1. make trigger for category X product
-2. delete , edit for item 
 
 
 
@@ -439,7 +464,10 @@ RewriteRule (.*) /public/$1 [L]
 
 ==========================================================================
 
-
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
 
 
 
@@ -481,7 +509,7 @@ RewriteRule (.*) /public/$1 [L]
 
 
 
-====================== Laravel 11 ========================
+=========================================  Laravel 11 ==========================================
 
 *** error => SQLSTATE[HY000]: General error: 1273 Unknown collation: 'utf8mb4_0900_ai_ci'  ***
 
@@ -494,6 +522,18 @@ RewriteRule (.*) /public/$1 [L]
 
 
 
+
+============== custom auth ==============
+
+* use your middelwire in bootstrap/app.php  instead of kernel.php 
+
+
+    ->withMiddleware(function (Middleware $middleware) {
+
+        $middleware->alias([
+            'role' => \App\Http\Middleware\UserRoleMiddleware::class,
+        ]);
+    })
 
 
 

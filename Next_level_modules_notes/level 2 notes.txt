@@ -1,0 +1,273 @@
+================= Typescript basic ============
+
+
+1. genrate ts init file		= tsc --init
+
+2. console.log ts file with package ( to install) 		= npm i -g ts-node-dev 
+			  		( to run )		= ts-node-dev --respawn --transpile-only ./src/server.ts
+
+3.
+
+
+
+
+================================
+
+1. Type Assertion 	= when you are pretty much sure about the type, you give the type by yourself over typescript.
+
+    let anything : any;
+
+    anything = "this is a string" ;
+
+    (anything as string)
+
+
+
+2.  map types
+
+ // simple map
+    const arrayOfNumbers = [10 , 20, 25] ;
+    const arrayOfString = arrayOfNumbers.map( item => ( item.toString() )) ;
+    // console.log(arrayOfString);
+    
+
+
+    // mapped types
+    type AreaNumber = {
+        height: number;
+        width: number;
+    }
+
+    type AreaString = {
+        [key in keyof AreaNumber] : string	= AreaString er value gula string a convert hoye jabe.
+    }
+
+
+
+
+// mapped types with generic 
+
+    type AreaStringWithGeneric<T>  = {
+        [key in keyof T ] : T[key];			= 
+    }
+
+
+    const area1: AreaStringWithGeneric<{ height: string; width: number }> = {
+        height: "100",
+        width: 50,
+      };
+
+
+
+3. union and intersection 
+
+ union  	=  "male" | "female" 			= or value
+
+intersection	= "batting" & "bowling"			= and value
+
+
+
+
+4. type of 
+
+ function processValue(value: string | number): number {
+
+     if ( typeof value === 'number' ) {			= typeof diye value / parameter er type ber kora jaay.
+        return value * 2 ;
+    }
+     else return value.length ;
+ }
+
+ console.log(processValue(10));
+
+
+
+
+
+
+5. flat()			= multiple arrays of the same type with/ without using rest parameters
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================ express with typescript setup =============
+
+npm init -y				= install packages.json (with all yes)
+
+npm i -D typescript			= install typescript with dev dependencies
+
+npm i express				= install express
+
+tsc --init				= create typescript config file
+
+tsconfig.json  	= rootDir -> ./src/
+		= outDir -> ./dist/
+
+npm i --save-dev @types/express		= typescript package for express
+
+
+
+
+
+=============================== PH Tour Management backend =============================
+
+
+===== backend packages =====
+
+
+1. npm i express mongoose zod jsonwebtoken cors dotenv		= install backend 
+   npm i -D ts-node-dev @types/express @types/cors @types/dotenv @types/jsonwebtoken		= install types 
+
+*. npm i bcryptjs						= install brcypt for hashing password
+   npm i -D @types/bcryptjs					
+
+*. npm i jsonwebtoken						= install json web token
+   npm i -D @types/jsonwebtoken			
+
+*. npm i cookie-parser						= cookie parser package (direct refresh token access korar jonno )
+   npm i -D @types/cookie-parser
+ 
+*. npm i passport passport-local passport-google-oauth20	= install passport - local + google auth
+   npm i -D @types/passport @types/passport-local @types/passport-google-oauth20   
+
+*. npm i express-session					= express session package
+   npm i --save-dev @types/express-session
+
+
+2. package.json > "scripts":{}		= "dev": "ts-node-dev --respawn --transpile-only src/server.ts"		= to run with npm run dev
+
+3.
+
+
+
+
+
+
+
+======== router setup ========
+
+// http://localhost:5000/api/v1/auth/login
+
+ /* 1. app.ts
+ app.use("/api/v1", router) */
+
+ /* 2. router - index.ts
+    {
+     path: "/auth",
+     route: AuthRoutes,
+    }, 
+    
+*/
+
+
+  /*3. route.ts
+    router.post("/login", AuthControllers.credentialsLogin);
+  */
+
+
+
+=== backend changes ===
+1. setAuthCookie -> secure: true 		= to get token in cookies as secured
+
+2. checkAuth.ts  ->  const accessToken = req.headers.authorization || req.cookies.accessToken ;		= get access token in header / cookie
+
+
+==================== vercel backend hosting ===========
+
+// after some change
+
+npm run build
+vercel --prod
+
+
+
+https://parcel-dms-backend.vercel.app
+http://localhost:5000
+
+
+
+
+
+* show sender , receiver email/name/number in dashboard
+* send by phone number
+
+
+
+
+=============================== PH Tour Management frontend =============================
+
+ * flatMap()		= nested array na diye alada array dey.
+
+ 
+ * lazy()		 = a react hook for loading data lazy(^_^)
+
+const Analytics = lazy( ()=> import('@/pages/admin/Analytics')) ;		= Analytics page a gelei sudhu martro browser a ai page er chunk ta load hobe.
+
+
+* Frontend tailwind usefull resources ===>>> OriginUI, hyperUI, Logoipsum, 
+
+
+
+
+=============================== Next JS =============================
+
+
+1.1. cache ( build time e project er html file render hoy ) (SSG)		=   const res = await fetch ("http://localhost:5000/products", 
+											{ cache: "force-cache",   });
+=> site instant show kore ( super fast )
+
+
+
+1.2  user er request onujaye server theke html file toiri hoye asbe (SSR)	= cache: "no-store",
+
+=> site load nite ektu late kore.
+
+		 
+
+1.9. const pathName = usePathname();	= check the path
+
+2. "use client" ;			= when u need to make a page client side rendering, import it at the top of the page.
+
+3. const router = useRouter();		= use navigate ( the page must be client side. ) import from "next/navigation"
+	router.push('/about')
+
+	redirect()			= use this if the page is server side.
+
+4. folder name = (dashboard)		= it will not create any path/route only folder.
+
+5. folder name = [id]			= it is the dynamic route/ details page. 
+
+6. folder name = [...features]		= it is nested dynamic routes ( blogs/something/smtg/smtg )
+
+7. file name = route.js			= used for api routes. 
+
+
+
+
+* catching and revalidating		= it used to update data in realtime in Production Build.
+
+* for .env in next js			= use (NEXT_PUBLIC) before env variable like :  NEXT_PUBLIC_API_URL
+
+
+
+
+
+* services / [id] / page.jsx		= details page to get single data
+
+* services / api / [id] / route.js	= route page to get single data
+
+===================================================================================================================
+
+
+
+
