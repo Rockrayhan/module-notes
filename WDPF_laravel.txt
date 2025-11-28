@@ -161,7 +161,7 @@ https://laravel.com/docs/10.x/eloquent-relationships
 
 
 
-========================== Search =====================
+========================== Search =====================	
 https://www.itsolutionstuff.com/post/laravel-10-scout-full-text-search-tutorialexample.html
 
 
@@ -197,6 +197,33 @@ https://larainfo.com/blogs/laravel-10-inertia-vue-3-crud-operation-example
 
 
 
+
+
+
+======================== if migration / table already exists =============
+
+in sql > 
+
+SELECT * FROM migrations;				= check if the migration table does exists or not. 
+
+INSERT INTO migrations (migration, batch) VALUES 	= then insert the table that does not exist.
+('2025_09_04_051818_create_products_table', 1),
+('2025_09_04_051829_create_categories_table', 1);
+
+
+
+
+
+
+
+
+========================== clear cache / routes  ====================
+
+
+php artisan route:clear
+php artisan cache:clear
+php artisan view:clear
+php artisan config:cache
 
 
 
@@ -509,7 +536,7 @@ RewriteRule ^(.*)$ public/$1 [L]
 
 
 
-=========================================  Laravel 11 ==========================================
+=========================================  Laravel 11 =============================================
 
 *** error => SQLSTATE[HY000]: General error: 1273 Unknown collation: 'utf8mb4_0900_ai_ci'  ***
 
@@ -523,10 +550,12 @@ RewriteRule ^(.*)$ public/$1 [L]
 
 
 
-============== custom auth ==============
+============== custom auth / middlewire ==============
 
 * use your middelwire in bootstrap/app.php  instead of kernel.php 
 
+
+==================================
 
     ->withMiddleware(function (Middleware $middleware) {
 
@@ -535,9 +564,17 @@ RewriteRule ^(.*)$ public/$1 [L]
         ]);
     })
 
+========================= or ==============
 
 
+    ->withMiddleware(function (Middleware $middleware) {
+        $middleware->alias([
+            'admin' => \App\Http\Middleware\AdminMiddleware::class,
+        ]);
+    })
 
+
+=======================================
 
 
 

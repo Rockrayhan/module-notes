@@ -110,8 +110,8 @@ npm i express				= install express
 
 tsc --init				= create typescript config file
 
-tsconfig.json  	= rootDir -> ./src/
-		= outDir -> ./dist/
+tsconfig.json  	= rootDir -> ./src
+		= outDir -> ./dist
 
 npm i --save-dev @types/express		= typescript package for express
 
@@ -123,6 +123,12 @@ npm i --save-dev @types/express		= typescript package for express
 
 
 ===== backend packages =====
+
+
+npm init -y
+npm i -D typescript
+tsc --init
+
 
 
 1. npm i express mongoose zod jsonwebtoken cors dotenv		= install backend 
@@ -184,7 +190,18 @@ npm i --save-dev @types/express		= typescript package for express
 
 ==================== vercel backend hosting ===========
 
-// after some change
+setup -> vercel.json
+npm i -g vercel 	= one time to install gobally
+vercel -v 		= check version
+vercel login	
+vercel --prod
+
+
+
+
+
+
+// after every change
 
 npm run build
 vercel --prod
@@ -214,7 +231,9 @@ http://localhost:5000
 const Analytics = lazy( ()=> import('@/pages/admin/Analytics')) ;		= Analytics page a gelei sudhu martro browser a ai page er chunk ta load hobe.
 
 
-* Frontend tailwind usefull resources ===>>> OriginUI, hyperUI, Logoipsum, 
+
+
+* Frontend tailwind resources ===>>> OriginUI, hyperUI, Logoipsum, magicpattern.com, patterncraft.fun
 
 
 
@@ -222,8 +241,8 @@ const Analytics = lazy( ()=> import('@/pages/admin/Analytics')) ;		= Analytics p
 =============================== Next JS =============================
 
 
-1.1. cache ( build time e project er html file render hoy ) (SSG)		=   const res = await fetch ("http://localhost:5000/products", 
-											{ cache: "force-cache",   });
+1.1. cache ( build time e project er html file render hoy ) 		=   const res = await fetch ("http://localhost:5000/products", 
+     Static Site Generation (SSG)					{ cache: "force-cache",   });
 => site instant show kore ( super fast )
 
 
@@ -250,6 +269,15 @@ const Analytics = lazy( ()=> import('@/pages/admin/Analytics')) ;		= Analytics p
 6. folder name = [...features]		= it is nested dynamic routes ( blogs/something/smtg/smtg )
 
 7. file name = route.js			= used for api routes. 
+
+
+
+8. generateStaticParams()		= jei dynamic page gulo SSG (Static Site Generation) age thekei html e convert kore felte chai segular jonno.
+
+
+
+9. generateMetadata			= provide meta data for dynamic page.
+
 
 
 
